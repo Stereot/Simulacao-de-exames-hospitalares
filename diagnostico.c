@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <string.h>  // Para usar strcpy
+#include <string.h> 
 #include "hospital.h"
 #include "exam_priority_queue.h"
 #include "diagnostico.h"
