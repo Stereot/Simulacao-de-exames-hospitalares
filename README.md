@@ -38,8 +38,11 @@ O TAD Patient representa um paciente no sistema:
 # Atributos:
 
 Identificação única do paciente (int id)
+
 Nome do paciente (char* name)
+
 Instante de chegada (int timestamp)
+
 # Funções Associadas:
 
 Patient* criarPaciente(int id, const char *name, int timestamp): Cria e inicializa um novo paciente.
@@ -58,8 +61,11 @@ O TAD Exam representa um exame realizado por um paciente:
 # Atributos:
 
 Identificação única do exame (int id)
+
 Diagnóstico preliminar gerado por IA (int conditionIA)
+
 Diagnóstico final (int conditionFinal)
+
 Instante de realização do exame (int timestamp)
 
 # Funções Associadas:
@@ -77,6 +83,7 @@ int getExamConditionFinal(Exam *exam): Retorna o diagnóstico final.
 int getExamTimestamp(Exam *exam): Retorna o instante de realização do exame.
 
 # Compilação e Execução
+
 Para compilar e executar o projeto, siga os passos abaixo:
 
 Clone o repositório ou faça o download dos arquivos necessários.
@@ -84,6 +91,7 @@ Clone o repositório ou faça o download dos arquivos necessários.
 Abra um terminal e navegue até o diretório onde os arquivos foram salvos.
 
 Execute o comando make para compilar o projeto.
+
 Execute o comando ./simulacao para rodar o programa.
 
 Durante a execução, a simulação avançará no tempo, processando a chegada de pacientes, a realização de exames e a emissão de laudos. Os exames realizados e os laudos emitidos serão registrados nos arquivos db_exam.txt e db_report.txt, respectivamente.
