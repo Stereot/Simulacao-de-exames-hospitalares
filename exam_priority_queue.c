@@ -1,7 +1,7 @@
 #include "exam_priority_queue.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>  // Para usar strcpy
+#include <string.h> 
 #include "patient_queue.h"
 
 Exam *criarExam(Paciente *paciente, int timestamp) {
