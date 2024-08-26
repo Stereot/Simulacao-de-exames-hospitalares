@@ -2,7 +2,7 @@
 #define XR_MACHINE_MANAGER_H
 
 #include "patient_queue.h"
-#include "exam_priority_queue.h"  // Adicionado para ter acesso à função criarExam e ao tipo Exam
+#include "exam_priority_queue.h" 
 
 typedef struct XRMachineManager XRMachineManager;
 
