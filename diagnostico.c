@@ -6,7 +6,7 @@
 #include "unistd.h"
 
 void processarDiagnosticoIA(Hospital *hospital, Exam *exame, int tempo) {
-    int randValue = rand() % 100; // Gera um valor aleatório entre 0 e 99
+    int randValue = rand() % 100; 
 
     if (randValue < 30) {
         exame->conditionIA = 1;  // Saúde Normal (30%)
@@ -37,7 +37,7 @@ void processarDiagnosticoIA(Hospital *hospital, Exam *exame, int tempo) {
         strcpy(exame->conditionName, "Câncer de Pulmão");
     }
 
-    // Grava o exame no banco de dados
+   
     gravarExameNoBancoDeDados(exame);
 }
 
@@ -46,7 +46,7 @@ void processarLaudo(Hospital *hospital, Exam *exame, int tempo) {
 
     exame->conditionFinal = exame->conditionIA;
 
-    // Grava o laudo no banco de dados
+   
     gravarLaudoNoBancoDeDados(exame, tempo);
 }
 
