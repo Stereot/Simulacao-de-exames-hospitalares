@@ -7,7 +7,7 @@ struct XRMachineManager {
 
 XRMachineManager *criarXRMachineManager() {
     XRMachineManager *manager = (XRMachineManager *)malloc(sizeof(XRMachineManager));
-    manager->maquinasDisponiveis = 5; // Exemplo: 5 máquinas disponíveis
+    manager->maquinasDisponiveis = 5;
     return manager;
 }
 
@@ -22,8 +22,8 @@ int estaVaziaXRMachineManager(XRMachineManager *manager) {
 Exam *realizarExame(XRMachineManager *manager, Paciente *paciente, int timestamp) {
     if (manager->maquinasDisponiveis > 0) {
         manager->maquinasDisponiveis--;
-        Exam *exame = criarExam(paciente, timestamp); // Agora a função criarExam é reconhecida
-        manager->maquinasDisponiveis++; // Libera a máquina após realizar o exame
+        Exam *exame = criarExam(paciente, timestamp); 
+        manager->maquinasDisponiveis++;
         return exame;
     }
     return NULL;
