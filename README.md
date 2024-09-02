@@ -30,11 +30,9 @@ A cada unidade de tempo, há uma probabilidade de 20% de um novo paciente chegar
 
 ## Compilação e Execução
 
-Para compilar o projeto, utilize o comando `make`:
+Para compilar o projeto, utilize o comando `make` e `./simulacao`:
 
 ```sh
 make
-
-sh
 
 ./simulacao
