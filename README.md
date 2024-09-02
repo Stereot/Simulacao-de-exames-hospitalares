@@ -4,8 +4,6 @@ Aluno: Matheus Moroni Arçari Barcellos
 
 Professor: Thiago Paixão
 
-# Simulação de Hospital
-
 ## Descrição do Projeto
 
 Este projeto é uma simulação de um hospital que realiza exames de raio-X e diagnósticos utilizando algoritmos de Inteligência Artificial (IA). A simulação inclui a chegada de novos pacientes, a realização de exames, o processamento de diagnósticos e a emissão de laudos.
