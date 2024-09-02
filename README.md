@@ -34,3 +34,7 @@ Para compilar o projeto, utilize o comando `make`:
 
 ```sh
 make
+
+sh
+
+./simulacao
