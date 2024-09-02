@@ -4,97 +4,35 @@ Aluno: Matheus Moroni Arçari Barcellos
 
 Professor: Thiago Paixão
 
-Descrição do Projeto
-Este projeto simula o processo de gestão de um hospital, com ênfase na realização de exames de raio-X de tórax e na organização da fila para laudo médico. A simulação abrange a chegada de pacientes, a realização dos exames e o processamento dos laudos. O projeto implementa diversos Tipos Abstratos de Dados (TADs), como Paciente (Patient) e Exame (Exam), que modelam o fluxo de trabalho do hospital.
+# Simulação de Hospital
 
-Estrutura do Projeto
-O projeto está organizado nos seguintes arquivos:
+## Descrição do Projeto
 
-hospital.h: Contém as definições das estruturas e funções para manipulação dos TADs, além de gerenciar a lógica principal da simulação.
+Este projeto é uma simulação de um hospital que realiza exames de raio-X e diagnósticos utilizando algoritmos de Inteligência Artificial (IA). A simulação inclui a chegada de novos pacientes, a realização de exames, o processamento de diagnósticos e a emissão de laudos.
 
-hospital.c: Implementa as funções definidas no arquivo hospital.h.
+A cada unidade de tempo, há uma probabilidade de 20% de um novo paciente chegar ao hospital. Os pacientes são inseridos em uma fila e atendidos conforme a disponibilidade das máquinas de raio-X. O projeto é implementado em C, com uso de TADs para filas e gerenciamento de máquinas.
 
-main.c: Função principal que executa a simulação completa, gerenciando o fluxo de pacientes e exames.
+## Funcionalidades
 
-patient_queue.h/patient_queue.c: Implementa a fila de pacientes que aguardam para realizar exames.
+- **Chegada de Pacientes**: Simula a chegada aleatória de novos pacientes ao hospital.
+- **Fila de Pacientes**: Gerencia a fila de espera dos pacientes para exames.
+- **Realização de Exames**: Realiza exames de raio-X utilizando máquinas disponíveis.
+- **Diagnóstico via IA**: Processa o diagnóstico dos exames utilizando uma função de IA.
+- **Emissão de Laudos**: Gera laudos finais após o processamento dos diagnósticos.
+- **Relatórios de Simulação**: Imprime relatórios periódicos com o status da simulação.
 
-xr_machine_manager.h/xr_machine_manager.c: Gerencia as máquinas de raio-X e a realização dos exames.
+## Estrutura do Projeto
 
-exam_priority_queue.h/exam_priority_queue.c: Implementa a fila de prioridade de exames aguardando laudos.
+- **main.c**: Função principal que inicia e controla a simulação.
+- **hospital.c/h**: Gerencia a estrutura e as operações do hospital.
+- **patient_queue.c/h**: Implementa a fila de pacientes.
+- **xr_machine_manager.c/h**: Gerencia as máquinas de raio-X.
+- **exam_priority_queue.c/h**: Implementa a fila de prioridade para exames.
+- **diagnostico.c/h**: Processa os diagnósticos e laudos dos exames.
 
-diagnostico.h/diagnostico.c: Responsável pelo processamento dos diagnósticos e pela geração dos laudos.
+## Compilação e Execução
 
-Makefile: Arquivo para compilar o projeto utilizando o comando make.
+Para compilar o projeto, utilize o comando `make`:
 
-db_exam.txt: Armazena os registros dos exames realizados.
-
-db_report.txt: Armazena os laudos emitidos.
-
-Tipos Abstratos de Dados (TADs)
-
-Paciente (Patient)
-
-O TAD Patient representa um paciente no sistema:
-
-# Atributos:
-
-Identificação única do paciente (int id)
-
-Nome do paciente (char* name)
-
-Instante de chegada (int timestamp)
-
-# Funções Associadas:
-
-Patient* criarPaciente(int id, const char *name, int timestamp): Cria e inicializa um novo paciente.
-
-void destruirPaciente(Patient *patient): Libera a memória alocada para um paciente.
-
-int getPatientId(Patient* patient): Retorna a identificação do paciente.
-
-const char* getPatientName(Patient* patient): Retorna o nome do paciente.
-
-int getPatientTimestamp(Patient* patient): Retorna o instante de chegada do paciente.
-
-Exame (Exam)
-O TAD Exam representa um exame realizado por um paciente:
-
-# Atributos:
-
-Identificação única do exame (int id)
-
-Diagnóstico preliminar gerado por IA (int conditionIA)
-
-Diagnóstico final (int conditionFinal)
-
-Instante de realização do exame (int timestamp)
-
-# Funções Associadas:
-
-Exam* criarExam(Paciente *paciente, int timestamp): Cria e inicializa um novo exame para um paciente.
-
-void destruirExam(Exam *exam): Libera a memória alocada para um exame.
-
-int getExamId(Exam *exam): Retorna a identificação do exame.
-
-int getExamConditionIA(Exam *exam): Retorna o diagnóstico preliminar gerado por IA.
-
-int getExamConditionFinal(Exam *exam): Retorna o diagnóstico final.
-
-int getExamTimestamp(Exam *exam): Retorna o instante de realização do exame.
-
-# Compilação e Execução
-
-Para compilar e executar o projeto, siga os passos abaixo:
-
-Clone o repositório ou faça o download dos arquivos necessários.
-
-Abra um terminal e navegue até o diretório onde os arquivos foram salvos.
-
-Execute o comando make para compilar o projeto.
-
-Execute o comando ./simulacao para rodar o programa.
-
-Durante a execução, a simulação avançará no tempo, processando a chegada de pacientes, a realização de exames e a emissão de laudos. Os exames realizados e os laudos emitidos serão registrados nos arquivos db_exam.txt e db_report.txt, respectivamente.
-
-FIM!
+```sh
+make
